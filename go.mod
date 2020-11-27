@@ -1,3 +1,3 @@
-module github.com/b4fun/azure_usage_prom
+module github.com/b4fun/azure-usage-prom
 
 go 1.14

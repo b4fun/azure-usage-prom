@@ -1,4 +1,4 @@
-# azure_usage_prom
+# azure-usage-prom
 
 Convert Azure resource usage to prometheus metrics.
 
