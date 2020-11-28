@@ -2,6 +2,11 @@
 
 Convert Azure resource usage to prometheus metrics.
 
+| Resource | Link |
+|:----|:----|
+| Reference | [![API](https://godoc.org/github.com/b4fun/azure-usage-prom?status.svg)](https://pkg.go.dev/github.com/b4fun/azure-usage-prom?tab=overview) |
+| Docker Image | [![Docker Build Status](https://img.shields.io/docker/build/b4fun/azure-usage-prom)](https://hub.docker.com/r/b4fun/azure-usage-prom) |
+
 ## Usage
 
 ```
