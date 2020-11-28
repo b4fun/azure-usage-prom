@@ -99,3 +99,8 @@ func main() {
 	http.Handle("/metrics", promhttp.Handler())
 	glog.Fatal(http.ListenAndServe(*flagAddr, nil))
 }
+
+func init() {
+	// NOTE: override glog's log output, defaults to use stderr
+	flag.Set("logtostderr", "true")
+}
