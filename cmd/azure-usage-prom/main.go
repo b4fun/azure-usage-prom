@@ -27,9 +27,13 @@ var (
 	)
 )
 
-func parseQueryTargets() ([]azureusageprom.QueryTarget, error) {
+func parseQueryTargets(s string) ([]azureusageprom.QueryTarget, error) {
+	if s == "" {
+		return nil, nil
+	}
+
 	var rv []azureusageprom.QueryTarget
-	groups := strings.Split(*flagQueryTargets, ",")
+	groups := strings.Split(s, ",")
 	for _, group := range groups {
 		parts := strings.Split(group, "|")
 		if len(parts) != 3 {
@@ -79,7 +83,7 @@ func main() {
 	}
 	usageLister := usagelister.New(cloud, authorizer)
 
-	queryTargets, err = parseQueryTargets()
+	queryTargets, err = parseQueryTargets(*flagQueryTargets)
 	if err != nil {
 		glog.Fatal(err)
 	}
